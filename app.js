@@ -37,14 +37,13 @@ passport.deserializeUser((user,done)=>{
 
 let count=1,
 printData=(req,res,next)=>{
-    console.log(`req.body.username--->${req.body.username}`)
-    console.log(`req.body.password--->${req.body.password}`)
+   
     next();
 }
 
 app.use(printData);
 app.listen(3001,()=>{
-    console.log("server started on port 3001")
+    
 })
 
 app.get("/login",(req,res)=>{
